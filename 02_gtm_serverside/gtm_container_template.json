@@ -1,0 +1,40 @@
+﻿{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-10-15 18:00:00",
+  "containerVersion": {
+    "path": "accounts/1000000/containers/2000000/versions/0",
+    "accountId": "1000000",
+    "containerId": "2000000",
+    "containerVersionId": "0",
+    "container": {
+      "name": "GTM Server-Side Container - B2B E-Commerce",
+      "usageContext": ["SERVER"]
+    },
+    "tag": [
+      {
+        "name": "GA4 Server Client Routing",
+        "type": "gaaw_tag",
+        "parameter": [
+          {"type": "TEMPLATE", "key": "measurementId", "value": "{{GA4 Measurement ID}}"}
+        ]
+      },
+      {
+        "name": "Meta Conversions API (CAPI) Tag",
+        "type": "meta_capi_tag",
+        "parameter": [
+          {"type": "TEMPLATE", "key": "pixelId", "value": "{{Meta Pixel ID}}"},
+          {"type": "TEMPLATE", "key": "apiAccessToken", "value": "{{Meta Access Token}}"},
+          {"type": "BOOLEAN", "key": "enableDeduplication", "value": "true"}
+        ]
+      },
+      {
+        "name": "Google Ads Enhanced Conversions Tag",
+        "type": "goog_ads_server",
+        "parameter": [
+          {"type": "TEMPLATE", "key": "conversionId", "value": "{{Google Ads Conversion ID}}"},
+          {"type": "BOOLEAN", "key": "hashUserEmails", "value": "true"}
+        ]
+      }
+    ]
+  }
+}
